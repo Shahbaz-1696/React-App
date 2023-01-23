@@ -2,11 +2,7 @@ import React from 'react';
 import { Navbar} from 'reactstrap';
 import { NavbarBrand } from 'reactstrap';
 import Menu from './components/MenuComponent';
-import './App.css';
 import { DISHES } from './shared/dishes';
-
-
-
 class App extends React.Component {
   constructor(props){
     super(props);
