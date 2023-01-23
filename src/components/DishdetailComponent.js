@@ -33,9 +33,9 @@ class DishDetail extends Component{
                     $nbsp;
                     {new Intl.DateTimeFormat('en-US', {
                         year: 'numeric',
-                        month: 'long',
+                        month: 'short',
                         day: '2-digit'
-                    }).format(new Date(comment.date))}</p>
+                    }).format(new Date(Date.parse(comment.date)))}</p>
                 </li>  
                 ); 
             });
@@ -51,15 +51,14 @@ class DishDetail extends Component{
     }
 
     render(){
-        const dish = this.props.selectedDish
-        if(dish == null){
+        if(this.props.dish == null){
             return(<div></div>);
         }
         return(
             <div className="container">
                 <div className="row">
-                    {this.renderDish(dish)}
-                    {this.renderComments(dish.comments)}
+                    {this.renderDish(this.props.dish)}
+                    {this.renderComments(this.props.dish.comments)}
                 </div>
             </div>
         );
