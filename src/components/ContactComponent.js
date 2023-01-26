@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import { Breadcrumb, BreadcrumbItem, Form, FormGroup, Col, Label, Input, Button, FormFeedback } from "reactstrap";
+import { Breadcrumb, BreadcrumbItem, Form, FormGroup, Col, Label, Input, 
+    Button, FormFeedback } from "reactstrap";
 
 class Contact extends Component{
 
@@ -194,13 +195,13 @@ class Contact extends Component{
                             onChange={this.handleInputChange} />
                         </Col>
                     </FormGroup>
-                    <FormGroup row>
+                    <FormFeedback row>
                         <Col md={{size:10, offset:2}}>
                             <Button type="submit" color="primary">
                                 Send Feedback
                             </Button>
                         </Col>
-                    </FormGroup>
+                    </FormFeedback>
                 </Form>
                </div> 
             </div>
